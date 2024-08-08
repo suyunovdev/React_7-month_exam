@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none !important;
+}
+.saidbarr {
+  width: 300px;
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22.77px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  text-align: left;
+  height: 100%;
+
+  //   background: #000;
+  .container {
+    // height: 100% !important;
+    // width: 300px;
+    background: black;
+    padding: 15px;
+    text-align: start;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: 20px;
+    .one,
+    .two {
+      width: 100%;
+      display: flex;
+      align-items: start;
+      cursor: pointer;
+      justify-content: start;
+      font-size: 16px;
+      flex-direction: column;
+      //   gap: 3px;
+      color: white;
+      gap: 10px;
+      //   background: #000 !important;
+
+      svg {
+        font-size: 50px !important;
+        width: 40px !important;
+        height: 30px !important;
+      }
+      h1 {
+        font-size: 18px !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        margin: 0;
+        img {
+          width: 30px;
+          height: 30px;
+          margin-left: 5px;
+        }
+      }
+    }
+    .three {
+      ul {
+        display: flex;
+        align-items: start;
+        justify-content: space-around;
+        flex-direction: column;
+        list-style: none !important;
+        color: #b3b3b3;
+        gap: 8px;
+        li {
+          a {
+            color: #b3b3b3;
+            font-size: 18px;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,114 @@
+/* FriendActivity.scss */
+.friend-activity {
+  width: 250px;
+  background-color: #000;
+  color: white;
+  position: unset;
+  // top: 20px;
+  right: 0;
+  // top: 0;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  .headers {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h3 {
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .icon-button {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
+
+      .icon-person {
+        // Add your icon style here
+      }
+    }
+  }
+
+  .friends-list {
+    margin: 20px 0;
+
+    .friend {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+
+      .avatar {
+        width: 40px;
+        height: 40px;
+        background-color: #333;
+        border-radius: 50%;
+        margin-right: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .details {
+        .name,
+        .activity {
+          background-color: #333;
+          height: 10px;
+          width: 100px;
+          border-radius: 4px;
+          margin-bottom: 4px;
+
+          &:last-child {
+            width: 79px;
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .footerrr {
+    text-align: center;
+
+    p {
+      font-size: 12px;
+      color: #b3b3b3;
+      margin-bottom: 10px;
+    }
+
+    .settings-button {
+      background-color: #1db954;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 50px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: bold;
+
+      &:hover {
+        background-color: #1ed760;
+      }
+    }
+  }
+}
+.open-button {
+  background-color: #1db954;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 20px;
+
+  &:hover {
+    background-color: #1ed760;
+  }
+}

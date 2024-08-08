@@ -1,0 +1,59 @@
+.playlist {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex-direction: column;
+  .see {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+  }
+
+  .see h1 {
+    font-size: 24px;
+  }
+
+  .see h2 {
+    font-size: 16px;
+    color: #1db954;
+    cursor: pointer;
+  }
+
+  .passer {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .see {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    h1 {
+      margin: 0;
+    }
+  }
+  .passer {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    .playlist-item {
+      width: 145px;
+      height: 300px;
+      background: #ffffff39;
+      padding: 15px;
+      border-radius: 6px;
+      font-size: 16px;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
