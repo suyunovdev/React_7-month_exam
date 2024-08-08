@@ -113,7 +113,7 @@ function Home() {
                     onClick={() => navigate(`/playlist/${item.id}`)}>
                     <img src={item.images[0].url} alt={item.name} />
                     <p>{item.name}</p>
-                    {/* <p>{item.description}</p> */}
+                    <p>{item.description}</p>
                   </div>
                 ))}
             </div>

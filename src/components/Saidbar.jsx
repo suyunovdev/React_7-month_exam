@@ -11,7 +11,10 @@ function Saidbar() {
         <div className="one">
           <h1>
             <BiHome />
-            Home
+            <Link to="/home" className="linkd">
+              {" "}
+              Home
+            </Link>
           </h1>
           <h1>
             <BiSearch />
@@ -29,7 +32,9 @@ function Saidbar() {
           </h1>
           <h1>
             <img src={liked} alt="Liked Songs" />
-            <Link to="/favorites">Liked Songs</Link>
+            <Link to="/favorites" className="linkd">
+              Liked Songs
+            </Link>
           </h1>
         </div>
         <div className="three">

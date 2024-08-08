@@ -10,7 +10,7 @@ function App() {
     <FavoriteProvider>
       <Router>
         <Routes>
-          <Route path="/login" element={<Login />} />
+          <Route path="/" element={<Login />} />
           <Route path="/home" element={<Home />} />
           <Route path="/playlist/:id" element={<PlaylistDetails />} />
           <Route path="/favorites" element={<FavoritesPage />} />
