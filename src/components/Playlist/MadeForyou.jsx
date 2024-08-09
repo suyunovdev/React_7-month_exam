@@ -1,11 +1,14 @@
-import { useEffect, useState } from "react";
-import "./MadeForYou.scss";
+import { useState } from "react";
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const MadeForYou = () => {
   const [token, setToken] = useState("");
   const [playlists, setPlaylists] = useState([]);
   const [showAll, setShowAll] = useState(false);
+  const navigate = useNavigate(); // navigate funksiyasini yarating
 
+  // token olish uchun useEffect
   useEffect(() => {
     const getToken = async () => {
       try {
@@ -37,6 +40,7 @@ const MadeForYou = () => {
     getToken();
   }, []);
 
+  // playlistlarni olish uchun useEffect
   useEffect(() => {
     if (token) {
       const fetchPlaylists = async () => {
@@ -73,10 +77,13 @@ const MadeForYou = () => {
 
       <div className="passer">
         {(showAll ? playlists : playlists.slice(0, 4)).map(item => (
-          <div key={item.id} className="playlist-item">
+          <div
+            key={item.id}
+            className="playlist-item"
+            onClick={() => navigate(`/playlist/${item.id}`)} // playlist bosilganda navigatsiya qilish
+          >
             <img src={item.images[0].url} alt={item.name} />
             <p>{item.name}</p>
-            {/* <p>{item.name}</p> */}
           </div>
         ))}
       </div>
