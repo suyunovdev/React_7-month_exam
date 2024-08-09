@@ -25,11 +25,15 @@ const FavoritesPage = () => {
   }, []);
 
   const removeFavoriteAndNavigate = (id, playlistId) => {
-    if (window.confirm("Haqiqatdan ushbu trekni uchirmoqchimisiz?")) {
+    if (window.confirm("Haqiqatdan ushbu trekni o‘chirmoqchimisiz?")) {
       const updatedFavorites = favorites.filter(track => track.id !== id);
       setFavorites(updatedFavorites);
       localStorage.setItem("favoriteTracks", JSON.stringify(updatedFavorites));
-      navigate(`/playlist/${playlistId}`);
+
+      // Agar playlistId mavjud bo'lsa, navigatsiya qilish
+      if (playlistId) {
+        navigate(`/playlist/${playlistId}`);
+      }
     }
   };
 
@@ -43,6 +47,7 @@ const FavoritesPage = () => {
     } else {
       if (audio) {
         audio.pause();
+        audio.currentTime = 0; // Oldingi trekni to'liq to'xtatish
       }
       const newAudio = new Audio(track.preview_url);
       newAudio.play();
@@ -80,9 +85,10 @@ const FavoritesPage = () => {
           <tbody>
             {favorites.map(track => (
               <tr key={track.id}>
+                <td>{track.img}</td>
                 <td>{track.name}</td>
                 <td>{track.artists}</td>
-                <td>{track.album}</td>
+                <td>{track.album.name}</td>
                 <td>
                   {Math.floor(track.duration_ms / 60000)}:
                   {Math.floor((track.duration_ms % 60000) / 1000)
